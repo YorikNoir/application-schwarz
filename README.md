@@ -7,7 +7,7 @@ Professionelle Bewerbungsunterlagen von Katharina Schwarz.
 Der aktuelle Lebenslauf steht zum Download bereit unter:
 - **Live-Seite**: [https://YorikNoir.github.io/application-schwarz/](https://YorikNoir.github.io/application-schwarz/)
 - **Direkter PDF-Link**: [Lebenslauf herunterladen](Katharina_Schwarz_Lebenslauf.pdf)
-- **shorturl**: [http://bit.ly/46tYgac]
+- **shorturl**: http://bit.ly/46tYgac
 
 ## 🚀 Verwendung
 
@@ -25,4 +25,5 @@ Der QR-Code auf der Seite verweist direkt auf die GitHub Pages URL und ermöglic
 ---
 
 *Letzte Aktualisierung: Februar 2026*
+
 

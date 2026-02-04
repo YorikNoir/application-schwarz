@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katharina Schwarz - Bewerbungsunterlagen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,13 +13,14 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(165deg, #1e3a5f 0%, #2c5282 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
@@ -37,14 +39,15 @@
             border-radius: 50%;
             margin: 0 auto 30px;
             overflow: hidden;
-            border: 5px solid #667eea;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            border: 5px solid #4299e1;
+            box-shadow: 0 10px 30px rgba(66, 153, 225, 0.3);
         }
         
         .profile-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
         }
         
         h1 {
@@ -52,17 +55,20 @@
             font-size: 32px;
             margin-bottom: 10px;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .subtitle {
-            color: #718096;
+            color: #4299e1;
             font-size: 18px;
             margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
         
         .download-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
             color: white;
             text-decoration: none;
             padding: 18px 50px;
@@ -70,13 +76,13 @@
             font-size: 18px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 30px rgba(66, 153, 225, 0.4);
             margin-bottom: 20px;
         }
         
         .download-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 15px 40px rgba(66, 153, 225, 0.6);
         }
         
         .download-btn::before {
@@ -87,22 +93,22 @@
         .view-html-btn {
             display: inline-block;
             background: white;
-            color: #667eea;
+            color: #2c5282;
             text-decoration: none;
             padding: 14px 40px;
             border-radius: 50px;
             font-size: 16px;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: 2px solid #667eea;
+            border: 2px solid #2c5282;
             margin-top: 15px;
         }
         
         .view-html-btn:hover {
-            background: #667eea;
+            background: #2c5282;
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px rgba(44, 82, 130, 0.3);
         }
         
         .view-html-btn::before {
@@ -131,7 +137,7 @@
         }
         
         .contact-item a {
-            color: #667eea;
+            color: #4299e1;
             text-decoration: none;
         }
         
@@ -142,14 +148,16 @@
         .qr-section {
             margin-top: 40px;
             padding: 30px;
-            background: #f7fafc;
+            background: linear-gradient(135deg, #ebf8ff 0%, #f0f9ff 100%);
             border-radius: 15px;
+            border-left: 4px solid #4299e1;
         }
         
         .qr-section h3 {
-            color: #2d3748;
+            color: #1a365d;
             margin-bottom: 15px;
             font-size: 16px;
+            font-weight: 700;
         }
         
         .qr-code {
@@ -172,7 +180,7 @@
                 width: 100px;
                 height: 100px;
                 margin-bottom: 20px;
-                border: 3px solid #667eea;
+                border: 3px solid #4299e1;
             }
             
             h1 {

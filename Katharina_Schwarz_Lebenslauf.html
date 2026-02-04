@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katharina Schwarz">
+    <meta name="description" content="Lebenslauf - Katharina Schwarz - Kauffrau für Büromanagement">
+    <meta name="keywords" content="Büromanagement, Office Management, Einsatzmanagement, Kundenmanagement, Logistik, Vertrieb, Organisation, MS Office, SharePoint, Teams">
+    <title>Katharina Schwarz - Lebenslauf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 9pt;
+            line-height: 1.45;
+            color: #2d3748;
+            background: #f7fafc;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .page {
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0 auto;
+            background: white;
+            display: flex;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .page-1 {
+            margin-bottom: 2cm;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 6.8cm;
+            background: linear-gradient(165deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 1.5cm 1cm;
+            position: relative;
+        }
+        
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .profile-image-placeholder {
+            width: 4cm;
+            height: 4cm;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+            margin: 0 auto 0.8cm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48pt;
+            font-weight: 300;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .profile-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .sidebar-section {
+            margin-bottom: 0.9cm;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 10pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5cm;
+            color: #90cdf4;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 0.2cm;
+        }
+        
+        .contact-item {
+            margin-bottom: 0.4cm;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.6;
+        }
+        
+        .contact-icon {
+            margin-right: 0.3cm;
+            font-weight: 600;
+            color: #90cdf4;
+            min-width: 0.5cm;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .skill-item {
+            margin-bottom: 0.35cm;
+            padding-left: 0.5cm;
+            position: relative;
+        }
+        
+        .skill-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #90cdf4;
+            font-weight: bold;
+        }
+        
+        .skill-label {
+            font-weight: 600;
+            color: #e0f2fe;
+        }
+        
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3cm;
+            padding: 0.2cm 0.4cm;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+        
+        .language-name {
+            font-weight: 500;
+        }
+        
+        .language-level {
+            font-size: 8pt;
+            color: #90cdf4;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 1.5cm 1.2cm;
+            background: white;
+        }
+        
+        .header {
+            margin-bottom: 0.7cm;
+            border-bottom: 3px solid #2c5282;
+            padding-bottom: 0.4cm;
+        }
+        
+        .name {
+            font-size: 32pt;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 0.15cm;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 12pt;
+            color: #4299e1;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .profile-box {
+            background: linear-gradient(135deg, #ebf8ff 0%, #f0f9ff 100%);
+            border-left: 4px solid #4299e1;
+            padding: 0.5cm;
+            margin-bottom: 0.6cm;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 8px rgba(66, 153, 225, 0.1);
+        }
+        
+        .profile-box p {
+            text-align: justify;
+            line-height: 1.65;
+            color: #2d3748;
+        }
+        
+        .section {
+            margin-bottom: 0.8cm;
+        }
+        
+        .section-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 0.5cm;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.3cm;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 0.15cm;
+            height: 1cm;
+            background: linear-gradient(to bottom, #4299e1, #667eea);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 0.5cm;
+            padding-left: 0.7cm;
+            border-left: 2px solid #e2e8f0;
+            position: relative;
+            page-break-inside: avoid;
+            overflow: visible;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.22cm;
+            top: 0.15cm;
+            width: 0.35cm;
+            height: 0.35cm;
+            background: #4299e1;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #4299e1;
+        }
+        
+        .timeline-period {
+            font-weight: 600;
+            color: #4299e1;
+            font-size: 8.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.1cm;
+        }
+        
+        .timeline-title {
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #1a365d;
+            margin-bottom: 0.05cm;
+        }
+        
+        .timeline-company {
+            font-style: italic;
+            color: #718096;
+            font-size: 9pt;
+            margin-bottom: 0.25cm;
+        }
+        
+        .timeline-item ul {
+            margin-left: 0.5cm;
+            margin-top: 0.15cm;
+        }
+        
+        .timeline-item li {
+            margin-bottom: 0.12cm;
+            line-height: 1.55;
+            color: #4a5568;
+        }
+        
+        .timeline-item li strong {
+            color: #2d3748;
+        }
+        
+        .reference {
+            font-size: 7.5pt;
+            color: #a0aec0;
+            font-style: italic;
+            margin-top: 0.15cm;
+        }
+        
+        .education-grid {
+            display: grid;
+            gap: 0.4cm;
+        }
+        
+        .education-item {
+            background: #f7fafc;
+            padding: 0.4cm 0.5cm;
+            border-radius: 6px;
+            border-left: 3px solid #4299e1;
+            page-break-inside: avoid;
+        }
+        
+        .signature-section {
+            margin-top: 1cm;
+            text-align: right;
+        }
+        
+        .signature-date {
+            color: #718096;
+            margin-bottom: 0.4cm;
+        }
+        
+        .signature-name {
+            font-style: italic;
+            color: #2d3748;
+            font-size: 10pt;
+        }
+        
+        /* Page 2 adjustments */
+        .page-2 .main-content {
+            padding-top: 1.5cm;
+        }
+        
+        /* Print styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 29.7cm;
+                page-break-inside: avoid;
+            }
+            
+            .page-1 {
+                page-break-after: always;
+                margin-bottom: 0;
+            }
+            
+            .page-2 {
+                page-break-after: avoid;
+                page-break-before: always;
+            }
+            
+            .timeline-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .timeline-item::before {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+        
+        /* Print Button */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(66, 153, 225, 0.5);
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Semantic content for ATS/Algorithm parsing -->
+    <header style="position: absolute; left: -9999px;">
+        <h1>Katharina Schwarz</h1>
+        <div itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">Katharina Schwarz</span>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Gewerbestraße 4</span>,
+                <span itemprop="postalCode">79256</span> <span itemprop="addressLocality">Buchenbach</span>
+            </address>
+            <span itemprop="email">schwarz.kadda@gmail.com</span>
+            <span itemprop="telephone">01578 6422274</span>
+            <span itemprop="birthDate">1983-09-01</span>
+        </div>
+    </header>
+    
+    <button class="print-button no-print" onclick="window.print()">📄 Als PDF speichern</button>
+    
+    <!-- Page 1 -->
+    <div class="page page-1">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-image-placeholder">
+                <img src="Kadda Bewerbungsphoto.png" alt="Katharina Schwarz">
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Kontakt</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>Gewerbestraße 4<br>79256 Buchenbach</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div><a href="mailto:schwarz.kadda@gmail.com">schwarz.kadda@gmail.com</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>01578 6422274</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🎂</div>
+                    <div>01.09.1983<br>Rodewisch</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💍</div>
+                    <div>Verheiratet seit 2017<br>Keine Kinder</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>IT-Kenntnisse</h3>
+                <div class="skill-item">
+                    <div class="skill-label">Projektmanagement</div>
+                    Monday, Guru, SharePoint
+                </div>
+                <div class="skill-item">
+                    <div class="skill-label">Kommunikation</div>
+                    MS Teams, Zoom
+                </div>
+                <div class="skill-item">
+                    <div class="skill-label">MS Office</div>
+                    PowerPoint, Outlook, Excel, Word
+                </div>
+                <div class="skill-item">
+                    <div class="skill-label">Basiswissen</div>
+                    Python, Automatisierung
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1 class="name">Katharina Schwarz</h1>
+                <div class="tagline" role="doc-subtitle">Kauffrau für Büromanagement (in Umschulung)</div>
+            </header>
+            
+            <div class="profile-box">
+                <p>Engagierte und vielseitige Bürokraft mit langjähriger Erfahrung in Organisation, Kunden- und Einsatzmanagement sowie im Service- und Führungsbereich. Aktuell in Umschulung zur Kauffrau für Büromanagement mit fundierten Kenntnissen in modernen Office‑, Kollaborations- und Organisationstools. Hohe Serviceorientierung, ausgeprägtes Organisationstalent und souverän im Umgang mit Kunden, Teams und administrativen Abläufen.</p>
+            </div>
+            
+            <section class="section" aria-label="Berufserfahrung">
+                <h2 class="section-title">Berufserfahrung</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-period">Seit 09/2025 – voraussichtlich 07/2027</div>
+                    <div class="timeline-title">Umschulung zur Kauffrau für Büromanagement</div>
+                    <div class="timeline-company">Vatter Bildungszentrum GmbH, Freiburg</div>
+                    <ul>
+                        <li>Theoriephase: 08.09.2025 – 26.06.2026</li>
+                        <li>Praxisphase: 29.06.2026 – 30.07.2027</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-period">03/2023 – 02/2025</div>
+                    <div class="timeline-title">Bürokraft für Logistik & Vertrieb</div>
+                    <div class="timeline-company">Dold Holzwerke GmbH</div>
+                    <ul>
+                        <li>Administrative Unterstützung von Logistik und Vertrieb</li>
+                        <li>Koordination von Abläufen und Kommunikation mit internen und externen Ansprechpartnern</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-period">09/2021 – 03/2023</div>
+                    <div class="timeline-title">Einsatzmanagement & Kundenmanagement</div>
+                    <div class="timeline-company">Zentgraf Team Support, Freiburg</div>
+                    <ul>
+                        <li>Planung und Koordination von Einsätzen</li>
+                        <li>Betreuung und Kommunikation mit Kunden</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-period">04/2019 – 09/2021</div>
+                    <div class="timeline-title">Rezeption · Etagenleitung · Restaurantleitung</div>
+                    <div class="timeline-company">Hofgut Himmelreich, Buchenbach</div>
+                    <ul>
+                        <li>Verantwortung für Rezeption und Gästebetreuung</li>
+                        <li>Führung und Organisation von Teams</li>
+                        <li>Koordination des Restaurantbetriebs</li>
+                    </ul>
+                    <div class="reference">Referenz: 07661 98620</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Page 2 -->
+    <div class="page page-2">
+        <!-- Sidebar (continued) -->
+        <div class="sidebar">
+            <div style="height: 4.5cm;"></div>
+            
+            <div class="sidebar-section">
+                <h3>Sprachen</h3>
+                <div class="language-item">
+                    <span class="language-name">DEUTSCH</span>
+                    <span class="language-level">Muttersprache</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">ENGLISCH</span>
+                    <span class="language-level">Sehr gut</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">FRANZÖSISCH</span>
+                    <span class="language-level">Sehr gut</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">LATEIN</span>
+                    <span class="language-level">Großes Latinum</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">SPANISCH</span>
+                    <span class="language-level">Basiswissen</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Weitere Skills</h3>
+                <div class="skill-item">Organisationstalent</div>
+                <div class="skill-item">Mitarbeiterführung</div>
+                <div class="skill-item">Service-Kompetenz</div>
+                <div class="skill-item">Führerschein Klasse B</div>
+            </div>
+        </div>
+        
+        <!-- Main Content (continued) -->
+        <main class="main-content">
+            <section class="section" aria-label="Berufserfahrung Fortsetzung">
+                <h2 class="section-title">Berufserfahrung (Fortsetzung)</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-period">2008 – 04/2019</div>
+                    <div class="timeline-title">Verschiedene Positionen im Gastronomiebereich</div>
+                    <div class="timeline-company">Diverse gehobene Hotels und Gastronomiebetriebe, Region Freiburg & Schwarzwald</div>
+                    <ul>
+                        <li><strong>Barchefin:</strong> Hotel Reppert (4‑Sterne‑Superior), Hinterzarten · Boutique Hotel Kokoschinski, Feldberg</li>
+                        <li><strong>Inhaberin:</strong> Bar Erika, Freiburg (2013–2017) – eigenverantwortliche Führung des Betriebs</li>
+                        <li><strong>Barkeeper:</strong> Restaurant am Golfplatz Tuniberg, Viktoria Hotel (Hemingway Bar), Bar Erika, Eimer, Sonderbar</li>
+                        <li>Umfangreiche Erfahrung in Personalführung, Organisation und gehobener Gästebetreuung</li>
+                    </ul>
+                    <div class="reference">Referenzen: Hotel Reppert 07652 12080 (Arbeitszeugnis vorhanden) · Hotel Kokoschinski 07676 9333690 · Restaurant Tuniberg 07664 930612</div>
+                </div>
+            </section>
+            
+            <section class="section" aria-label="Ausbildung und Studium">
+                <h2 class="section-title">Ausbildung & Studium</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="timeline-period">2003 – 2008</div>
+                        <div class="timeline-title">Lehramtsstudium Anglistik, Romanistik, Germanistik</div>
+                        <div class="timeline-company">Albert‑Ludwigs‑Universität Freiburg</div>
+                        <div class="reference">Abschluss: ohne Abschluss</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section" aria-label="Schulbildung">
+                <h2 class="section-title">Schulbildung</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="timeline-period">2001 – 2003</div>
+                        <div class="timeline-title">Abitur · Note: 2,2</div>
+                        <div class="timeline-company">Johann‑Heinrich‑Pestalozzi‑Gymnasium, Rodewisch</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="timeline-period">2000 – 2001</div>
+                        <div class="timeline-title">Première</div>
+                        <div class="timeline-company">Lycée Jehan de Beauce, Chartres (Frankreich)</div>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="signature-section">
+                <div class="signature-date">Buchenbach, den 01.02.2026</div>
+                <br>
+                <div class="signature-name" style="margin-top: 1cm;">Katharina Schwarz</div>
+            </footer>
+        </main>
+    </div>
+    
+    <!-- Machine-readable summary for ATS -->
+    <div style="position: absolute; left: -9999px;" aria-hidden="false">
+        <h2>Zusammenfassung</h2>
+        <p>Bürokraft, Office Management, Einsatzplanung, Kundenbetreuung, Logistik, Vertrieb, Organisation, Teamführung</p>
+        <h2>Kernkompetenzen</h2>
+        <p>MS Office (Word, Excel, PowerPoint, Outlook), SharePoint, MS Teams, Zoom, Monday, Guru, Projektmanagement, Einsatzkoordination, Kundenmanagement, Organisationstalent, Mitarbeiterführung, Mehrsprachigkeit (Deutsch, Englisch, Französisch)</p>
+    </div>
+</body>
+</html>

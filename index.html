@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katharina Schwarz - Bewerbungsunterlagen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            border: 5px solid #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            color: #1a365d;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            margin-bottom: 20px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .download-btn::before {
+            content: '📄 ';
+            margin-right: 8px;
+        }
+        
+        .info {
+            color: #4a5568;
+            font-size: 14px;
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .contact-item {
+            display: inline-block;
+            margin: 5px 15px;
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .qr-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f7fafc;
+            border-radius: 15px;
+        }
+        
+        .qr-section h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .qr-code {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+        .qr-code img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 30px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .download-btn {
+                padding: 15px 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-image">
+            <img src="Kadda_Bewerbungsphoto.png" alt="Katharina Schwarz">
+        </div>
+        
+        <h1>Katharina Schwarz</h1>
+        <p class="subtitle">Kauffrau für Büromanagement (in Umschulung)</p>
+        
+        <a href="Katharina_Schwarz_Lebenslauf.pdf" class="download-btn" download>
+            Lebenslauf herunterladen
+        </a>
+        
+        <div class="info">
+            <p><strong>Vielen Dank für Ihr Interesse!</strong></p>
+            <p>Laden Sie meinen aktuellen Lebenslauf herunter, um mehr über meinen beruflichen Werdegang und meine Qualifikationen zu erfahren.</p>
+        </div>
+        
+        <div class="contact">
+            <div class="contact-item">
+                📧 <a href="mailto:schwarz.kadda@gmail.com">schwarz.kadda@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                📱 01578 6422274
+            </div>
+        </div>
+        
+        <div class="qr-section">
+            <h3>📱 QR-Code zum Teilen</h3>
+            <div class="qr-code">
+                <img src="qr-code.png" alt="QR Code">
+            </div>
+            <p style="margin-top: 10px; font-size: 12px; color: #718096;">
+                Scannen Sie diesen Code, um diese Seite zu öffnen
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -373,32 +373,294 @@
             }
         }
         
-        /* Print Button */
-        .print-button {
+        /* Responsive styles for mobile and tablet */
+        .mobile-header {
+            display: none;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .mobile-header {
+                display: block;
+                background: white;
+                padding: 1cm 0.8cm 0.6cm;
+                text-align: center;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            
+            .mobile-header .name {
+                font-size: 28pt;
+                font-weight: 700;
+                color: #1a365d;
+                margin-bottom: 0.2cm;
+                letter-spacing: -0.5px;
+            }
+            
+            .mobile-header .tagline {
+                font-size: 11pt;
+                color: #4299e1;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+            
+            .main-content .header {
+                display: none;
+            }
+            
+            .page-2 .sidebar > div[style*="height: 4.5cm"] {
+                display: none;
+            }
+            
+            body {
+                background: white;
+            }
+            
+            .page {
+                width: 100%;
+                height: auto;
+                min-height: auto;
+                display: block;
+                box-shadow: none;
+                margin-bottom: 0;
+            }
+            
+            .page-1 {
+                margin-bottom: 0;
+            }
+            
+            .sidebar {
+                width: 100%;
+                padding: 1.5cm 1cm;
+            }
+            
+            .profile-image-placeholder {
+                width: 8cm;
+                height: 8cm;
+                margin-bottom: 1cm;
+            }
+            
+            .main-content {
+                width: 100%;
+                padding: 1cm;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .mobile-header {
+                padding: 0.8cm 0.6cm 0.5cm;
+            }
+            
+            .mobile-header .name {
+                font-size: 22pt;
+            }
+            
+            .mobile-header .tagline {
+                font-size: 10pt;
+            }
+            
+            body {
+                font-size: 10pt;
+            }
+            
+            .page {
+                box-shadow: none;
+            }
+            
+            .sidebar {
+                padding: 1cm 0.8cm;
+            }
+            
+            .profile-image-placeholder {
+                width: 6cm;
+                height: 6cm;
+                margin-bottom: 0.8cm;
+            }
+            
+            .sidebar-section {
+                margin-bottom: 0.7cm;
+            }
+            
+            .sidebar-section h3 {
+                font-size: 9pt;
+                margin-bottom: 0.4cm;
+            }
+            
+            .contact-item {
+                margin-bottom: 0.3cm;
+                font-size: 9pt;
+            }
+            
+            .skill-item {
+                font-size: 9pt;
+                margin-bottom: 0.3cm;
+            }
+            
+            .language-item {
+                padding: 0.15cm 0.3cm;
+                margin-bottom: 0.25cm;
+                font-size: 9pt;
+            }
+            
+            .main-content {
+                padding: 0.8cm 0.6cm;
+            }
+            
+            .name {
+                font-size: 24pt;
+                margin-bottom: 0.2cm;
+            }
+            
+            .tagline {
+                font-size: 10pt;
+            }
+            
+            .header {
+                margin-bottom: 0.5cm;
+                padding-bottom: 0.3cm;
+            }
+            
+            .profile-box {
+                padding: 0.4cm;
+                margin-bottom: 0.5cm;
+                font-size: 9pt;
+            }
+            
+            .section {
+                margin-bottom: 0.6cm;
+            }
+            
+            .section-title {
+                font-size: 11pt;
+                margin-bottom: 0.4cm;
+            }
+            
+            .section-title::before {
+                height: 0.8cm;
+            }
+            
+            .timeline-item {
+                margin-bottom: 0.4cm;
+                padding-left: 0.6cm;
+            }
+            
+            .timeline-period {
+                font-size: 8pt;
+            }
+            
+            .timeline-title {
+                font-size: 10pt;
+            }
+            
+            .timeline-company {
+                font-size: 8.5pt;
+            }
+            
+            .timeline-item ul {
+                margin-left: 0.4cm;
+                font-size: 9pt;
+            }
+            
+            .timeline-item li {
+                margin-bottom: 0.1cm;
+            }
+            
+            .education-item {
+                padding: 0.3cm 0.4cm;
+            }
+            
+            .signature-section {
+                margin-top: 0.8cm;
+            }
+        }
+        
+        /* Scroll to top button */
+        .scroll-to-top {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            bottom: 2cm;
+            left: 2cm;
+            width: 3.5cm;
+            height: 3.5cm;
             background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
-            z-index: 1000;
             transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            border: none;
         }
         
-        .print-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(66, 153, 225, 0.5);
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
         }
         
-        @media print {
-            .print-button {
-                display: none;
+        .scroll-to-top:hover {
+            transform: translateY(-0.3cm);
+            box-shadow: 0 6px 20px rgba(66, 153, 225, 0.6);
+        }
+        
+        .scroll-to-top::before {
+            content: '↑';
+            font-size: 24pt;
+            color: white;
+            font-weight: bold;
+        }
+        
+        @media screen and (max-width: 400px) {
+            .scroll-to-top {
+                bottom: 1cm;
+                left: 1cm;
+                width: 2.5cm;
+                height: 2.5cm;
+            }
+            
+            .scroll-to-top::before {
+                font-size: 18pt;
+            }
+            
+            .mobile-header .name {
+                font-size: 18pt;
+            }
+            
+            .mobile-header .tagline {
+                font-size: 9pt;
+            }
+            
+            body {
+                font-size: 9pt;
+            }
+            
+            .sidebar {
+                padding: 0.8cm 0.6cm;
+            }
+            
+            .profile-image-placeholder {
+                width: 5cm;
+                height: 5cm;
+            }
+            
+            .main-content {
+                padding: 0.6cm 0.5cm;
+            }
+            
+            .name {
+                font-size: 20pt;
+            }
+            
+            .tagline {
+                font-size: 9pt;
+            }
+            
+            .section-title {
+                font-size: 10pt;
+            }
+            
+            .timeline-title {
+                font-size: 9pt;
             }
         }
     </style>
@@ -419,14 +681,18 @@
         </div>
     </header>
     
-    <button class="print-button no-print" onclick="window.print()">📄 Als PDF speichern</button>
+    <!-- Mobile header (only visible on mobile) -->
+    <div class="mobile-header">
+        <h1 class="name">Katharina Schwarz</h1>
+        <div class="tagline">Kauffrau für Büromanagement (in Umschulung)</div>
+    </div>
     
     <!-- Page 1 -->
     <div class="page page-1">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="profile-image-placeholder">
-                <img src="Kadda Bewerbungsphoto.png" alt="Katharina Schwarz">
+                <img src="Kadda_Bewerbungsphoto.png" alt="Katharina Schwarz">
             </div>
             
             <div class="sidebar-section">
@@ -635,5 +901,30 @@
         <h2>Kernkompetenzen</h2>
         <p>MS Office (Word, Excel, PowerPoint, Outlook), SharePoint, MS Teams, Zoom, Monday, Guru, Projektmanagement, Einsatzkoordination, Kundenmanagement, Organisationstalent, Mitarbeiterführung, Mehrsprachigkeit (Deutsch, Englisch, Französisch)</p>
     </div>
+    
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" aria-label="Zurück nach oben" title="Zurück nach oben"></button>
+    
+    <script>
+        // Scroll to top functionality
+        const scrollButton = document.querySelector('.scroll-to-top');
+        
+        // Show button when user scrolls down 300px
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
